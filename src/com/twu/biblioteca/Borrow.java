@@ -62,4 +62,35 @@ public class Borrow {
         return i;
     }
 
+    // 根据书名查找索引，有此书返其索引，无返-1
+    public int selectIndex(String bookname) {
+        int flag = -1;
+        for (int i = 0; i < book.booknames.length; i++) {
+            if (bookname.equals(book.booknames[i])) {
+                flag = i;
+            }
+        }
+        return flag;// 找不到此书
+    }
+    // 修改书籍信息 1书名 2作者 3出版日期 4总页数 5借阅者
+    public void modinfo(int a, String value, int index) {
+
+        switch (a) {
+            case 1:
+                book.booknames[index] = value;
+                break;
+
+            case 2:
+                book.authors[index] = value;
+                break;
+            case 3:
+                book.pubdates[index] = value;
+                break;
+            case 4:
+                book.sumpaginations[index] = value;
+                break;
+
+        }
+
+    }
 }
