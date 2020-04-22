@@ -11,7 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="953d0e23-a8ee-4e02-9b03-c0a0daa66cf1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587581850411</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="(1.2) View a list of books">
+      <created>1587582410624</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587582410624</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,32 +113,33 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="(1.1) User sees a welcome message" />
-    <option name="LAST_COMMIT_MESSAGE" value="(1.1) User sees a welcome message" />
+    <MESSAGE value="(1.2) View a list of books" />
+    <option name="LAST_COMMIT_MESSAGE" value="(1.2) View a list of books" />
   </component>
   <component name="WindowStateProjectService">
     <state x="603" y="320" key="#Notifications" timestamp="1587581448574">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="603" y="320" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1587581448574" />
-    <state width="699" height="245" key="GridCell.Tab.0.bottom" timestamp="1587582150390">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1587582265036">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587582150390" />
-    <state width="699" height="245" key="GridCell.Tab.0.center" timestamp="1587582150388">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587582265036" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1587582265029">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587582150388" />
-    <state width="699" height="245" key="GridCell.Tab.0.left" timestamp="1587582150387">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587582265029" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1587582265012">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587582150387" />
-    <state width="699" height="245" key="GridCell.Tab.0.right" timestamp="1587582150389">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587582265012" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1587582265035">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587582150389" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1587581872074">
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587582265035" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1587582430445">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1587581872074" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1587582430445" />
   </component>
 </project>

@@ -6,6 +6,7 @@ public class Menu {
 
         Menu ui = new Menu();
         ui.welcome();// 欢迎界面
+
     }
 
     // 欢迎界面

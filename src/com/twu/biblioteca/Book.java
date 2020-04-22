@@ -4,20 +4,20 @@ public class Book {
 
     public Book() {
         {
-            String noreaders= "无";
+            String noreaders= "Book still available ";
             for (int i = 0; i < booknames.length; i++) {
 
             }
             for (int i = 0; i < 5; i++) {
                 switch (i) {
                     case 0:
-                        booknames[i]="Book A";
+                        booknames[i]="Book 1";
                         authors[i]="Authors 1";
                         pubdates[i]="2020-01-01";
                         sumpaginations[i]="111";
                         break;
                     case 1:
-                        booknames[i]="Book B";
+                        booknames[i]="Book 2";
                         authors[i]="Authors 2";
                         pubdates[i]="2020-02-02";
                         sumpaginations[i]="222";
@@ -48,7 +48,7 @@ public class Book {
 
     public String[] booknames = new String[10];// 书名
     public String[] authors = new String[10];// 作者
-    public String[] pubdates = new String[10];// 出版日期
+    public String[] pubdates = new String[10];// 日期
     public String[] sumpaginations = new String[10];// 总页数
     public String[] borrowreaders = new String[10];// 借阅人
 
