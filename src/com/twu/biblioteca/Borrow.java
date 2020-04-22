@@ -93,4 +93,35 @@ public class Borrow {
         }
 
     }
+
+    // 检查书是否存在馆里和是否已借出
+    public int testBook(String bookname) {
+
+        // 馆里有此书，查找此书的索引，有此书a>=0，无返-1
+        int a = selectIndex(bookname);
+        // 馆里有此书
+        if (a >= 0) {
+            if ((book.borrowreaders[a].equals("无") || book.borrowreaders[a].equals("")))// 无人借此书，""为扫描器的直接回车值
+                return 0;//未借
+            else
+                return 1;//已借
+        } else {
+            return -1;// 馆里没有此书
+        }
+
+    }
+    //将借阅者设置为无或者为空
+    public void setBorrowReader(String bookname){
+        int a = selectIndex(bookname);
+        book.borrowreaders[a]="无";
+    }
+    //查询指定书的借阅者
+    public String getBorrowReader(String bookname){
+        int a = selectIndex(bookname);
+        return book.borrowreaders[a];
+    }
+
+
+
+
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
         Menu ui = new Menu();
         ui.welcome();// 欢迎界面
@@ -19,6 +19,7 @@ public class Menu {
         System.out.println("*********************************");
 
     }
+
 }
 
     public void showMenu() {
@@ -47,6 +48,7 @@ public class Menu {
                 break;
         }
     }
+
     // 返回主菜单功能
     public void returnMethod() {
         System.out.print("Push ENTER to return main menu：");//返回主界面
@@ -59,4 +61,30 @@ public class Menu {
     public void showBook() {
         borrow.showBook();
     }
+
+
+    // 书籍借阅功能
+    public void borrowBook() {
+        System.out.print("Please put the book's name：");//请输入要借的书名
+        Scanner scanner = new Scanner(System.in);
+        String bookname = scanner.nextLine();
+        int flag = borrow.testBook(bookname);
+        switch (flag) {
+            case 1://不存在此书的情况
+                System.out.println("借书失败，" + bookname + "不存在该图书馆中。");
+                System.out.print("输入0回车返回至主菜单，输入1回车则继续借书：");
+                int a1 = scanner.nextInt();
+                switch (a1) {
+                    case 0:
+                        showMenu();
+                        break;
+
+                    case 1:
+                        borrowBook();
+                        break;
+
+                }
+        }
+    }
+}
 
