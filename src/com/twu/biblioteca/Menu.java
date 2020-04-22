@@ -26,7 +26,7 @@ public class Menu {
         System.out.println("Number：1 -- Book list");
         System.out.println("Number：2 -- Borrow a book");
         System.out.println("Number：3 -- Return a book");
-        System.out.println("Number：4 -- Exit the system");
+        System.out.println("Number：4 -- Exit the system");//(1.6) Quit the application
         System.out.print("please type the function number：");
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();//
@@ -41,7 +41,7 @@ public class Menu {
             case 3:// 还书
                 returnBook();
                 break;
-            case 4://退出登录
+            case 4://Exit the system
                 welcome();
                 scanner.close();
                 break;

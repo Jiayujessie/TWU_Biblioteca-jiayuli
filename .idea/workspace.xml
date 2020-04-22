@@ -10,9 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="953d0e23-a8ee-4e02-9b03-c0a0daa66cf1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Borrow.java" afterDir="false" />
-    </list>
+    <list default="true" id="953d0e23-a8ee-4e02-9b03-c0a0daa66cf1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587583837234</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="(1.5) Get notified when choose invalid option">
+      <created>1587584474779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587584474779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,7 +134,8 @@
     <MESSAGE value="(1.2) View a list of books" />
     <MESSAGE value="(1.3) View author and publication year" />
     <MESSAGE value="(1.4) View main menu of options" />
-    <option name="LAST_COMMIT_MESSAGE" value="(1.4) View main menu of options" />
+    <MESSAGE value="(1.5) Get notified when choose invalid option" />
+    <option name="LAST_COMMIT_MESSAGE" value="(1.5) Get notified when choose invalid option" />
   </component>
   <component name="WindowStateProjectService">
     <state x="603" y="320" key="#Notifications" timestamp="1587581448574">
@@ -152,9 +158,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="699" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587583061423" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1587583856133">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1587584482353">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1587583856133" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1587584482353" />
   </component>
 </project>
