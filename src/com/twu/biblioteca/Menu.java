@@ -11,6 +11,7 @@ public class Menu {
         ui.welcome();// 欢迎界面
         ui.showMenu();
 
+
     }
 
     // 欢迎界面
@@ -18,7 +19,62 @@ public class Menu {
         System.out.println("*********************************");
         System.out.println("********Welcome to Biblioteca！********");
         System.out.println("*********************************");
+        loginBoundary();// 登录界面
 
+    }
+
+    // 管理员登录界面
+    public void loginBoundary() {
+        System.out.print("Please type your library number(Try 1)：");
+        Scanner scanner = new Scanner(System.in);
+        String username = scanner.nextLine();
+        System.out.print("Please type your password (Try 1)：");
+        Scanner scanner1 = new Scanner(System.in);
+        String password = scanner1.nextLine();
+        int flag = borrow.login(username, password);// 登录验证
+        switch (flag) {
+            case 0:// 密码错误
+                System.out.println("Wrong password, please type again:");
+                loginBoundary();
+                break;
+
+            case 1:// 验证通过
+                System.out.println("success login");
+                showMenu();// 登录成功后跳转至菜单功能管理
+                break;
+            case -1:// 账户不存在
+                System.out.println("Your library number is not exist!");
+                loginBoundary();
+                break;
+        }
+    }
+
+    // 菜单功能展示列表
+    public void showUserMenu() {
+        System.out.println("请输入功能编号进入相应的功能：");
+        System.out.println("所有的图书信息——编号：1");
+        System.out.println("还书功能——编号：2");
+        System.out.println("书籍借阅功能——编号：3");
+        System.out.println("退出系统——编号：4");
+        System.out.print("请输入功能编号：");
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();//
+        switch (a) {
+            case 1:// 图书信息
+                showBook();
+                returnMethod();// 返回主菜单
+                break;
+            case 2:// 还书
+                returnBook();
+                break;
+            case 3:// 借阅
+                borrowBook();
+                break;
+            case 4:// 退出登录
+                welcome();
+                scanner.close();
+                break;
+        }
     }
 
 
@@ -118,8 +174,8 @@ public class Menu {
         String bookname = scanner.nextLine();
         int flag = borrow.testBook(bookname);
         if (flag == 1) {//不存在此书的情况
-            System.out.println("借书失败，" + bookname + "不存在该图书馆中。");
-            System.out.print("输入0回车返回至主菜单，输入1回车则继续借书：");
+            System.out.println("Failed!" + bookname + "is not exist in library");
+            System.out.print("type 0 and enter to return main menu, type others to continue：");
             int a1 = scanner.nextInt();
             switch (a1) {
                 case 0:

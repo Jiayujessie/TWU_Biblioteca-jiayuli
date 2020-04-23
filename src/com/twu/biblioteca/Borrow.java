@@ -5,6 +5,21 @@ import java.util.Scanner;
 public class Borrow {
 
     public static Book book = new Book();
+    UserData user = new UserData();
+
+    // 管理员登录验证
+    public int login(String username, String password) {
+        if (username.equals(user.getUser())) {
+            if (password.equals(user.getPassword())) {
+                return 1;// 账号和密码验证通过
+            } else {
+                return 0;// 密码错误
+            }
+        } else {
+            return -1;// 账号不存在
+        }
+    }
+
 
     public void showBook() {
         System.out.println("Our library have  " + (book.booknames.length) + " books");
@@ -39,13 +54,12 @@ public class Borrow {
     }
     // 展示相关图书信息
     public void showPart(int a) {
-        int i = a;
         System.out.println(
                 "---------------------------------------------------------------------------------------------------------------");
-        System.out.println("Book ID" + (i) + " detail：");
-        System.out.print("Book Name：" + book.booknames[i - 1] + " ");
-        System.out.println("Author：" + book.authors[i - 1] + " ");
-        System.out.print("Year Published：" + book.pubdates[i - 1] + " ");
+        System.out.println("Book ID" + (a) + " detail：");
+        System.out.print("Book Name：" + book.booknames[a - 1] + " ");
+        System.out.println("Author：" + book.authors[a - 1] + " ");
+        System.out.print("Year Published：" + book.pubdates[a - 1] + " ");
         System.out.println(
                 "---------------------------------------------------------------分界线---------------------------------------------------");
     }
@@ -58,8 +72,7 @@ public class Borrow {
         }
         System.out.print(" Type the number for book detail, type 0 for all books information ：");//输入相应编号即可查看相应书籍的详细信息(输入0则查看所有信息)
         Scanner scanner = new Scanner(System.in);
-        int i = scanner.nextInt();
-        return i;
+        return scanner.nextInt();
     }
 
     // 根据书名查找索引，有此书返其索引，无返-1
