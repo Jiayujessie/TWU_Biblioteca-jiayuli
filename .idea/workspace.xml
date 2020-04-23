@@ -11,8 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="953d0e23-a8ee-4e02-9b03-c0a0daa66cf1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/checkoutMovie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587585416261</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary=" 2.1 / View a list of available movies">
+      <created>1587625099482</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587625099482</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +161,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="(1.1) User sees a welcome message" />
@@ -162,36 +172,38 @@
     <MESSAGE value="(1.6) Quit the application" />
     <MESSAGE value="(1.7) (1.8)(1.9)Check out book and get message" />
     <MESSAGE value="(1.10) (1.11)(1.12)Return book and get messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="(1.10) (1.11)(1.12)Return book and get messages" />
+    <MESSAGE value=" 2.1 / View a list of available movies" />
+    <MESSAGE value=" 2.2 / Checkout a movie" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 2.2 / Checkout a movie" />
   </component>
   <component name="WindowStateProjectService">
     <state x="603" y="320" key="#Notifications" timestamp="1587581448574">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="603" y="320" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1587581448574" />
-    <state width="699" height="245" key="GridCell.Tab.0.bottom" timestamp="1587585475713">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1587625644649">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587585475713" />
-    <state width="699" height="245" key="GridCell.Tab.0.center" timestamp="1587585475711">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587625644649" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1587625644648">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587585475711" />
-    <state width="699" height="245" key="GridCell.Tab.0.left" timestamp="1587585475710">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587625644648" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1587625644647">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587585475710" />
-    <state width="699" height="245" key="GridCell.Tab.0.right" timestamp="1587585475712">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587625644647" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1587625644649">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587585475712" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1587585424515">
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587625644649" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1587625109588">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1587585424515" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1587625109588" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/biblioteca$Menu.ic" NAME="Menu Coverage Results" MODIFIED="1587625050889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$Menu.ic" NAME="Menu Coverage Results" MODIFIED="1587625644626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
   </component>
