@@ -29,6 +29,8 @@ public class Menu {
         System.out.println("Number：2 -- Borrow a book");
         System.out.println("Number：3 -- Return a book");
         System.out.println("Number：4 -- Exit the system");//(1.6) Quit the application
+        System.out.println("Number：5 -- Movie list");// 2.1 / View a list of available movies
+        System.out.println("Number：6 -- Checkout a movie");// 2.2 / Checkout a movie
         System.out.print("please type the function number：");
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();//
@@ -45,6 +47,14 @@ public class Menu {
                 break;
             case 4://Exit the system
                 welcome();
+                scanner.close();
+                break;
+            case 5://Movie list
+                showMovie();
+                scanner.close();
+                break;
+            case 6://Checkout a movie
+                movieCheckout();
                 scanner.close();
                 break;
         }
@@ -123,5 +133,37 @@ public class Menu {
             }
         }
     }
+
+
+    // 电影信息展示功能
+
+    public void showMovie() { checkoutMovie.showMovie();}
+
+
+
+    // 电影借阅功能
+    public void movieCheckout() {
+        System.out.print("Please put the movie's name：");//请输入电影名
+        Scanner scanner = new Scanner(System.in);
+        String moviename = scanner.nextLine();
+        //不存在此书的情况
+        System.out.println("Failed，" + moviename + "is not exist in library!");
+        System.out.print("type 0 to return main menu, or type 1 to continue ：");
+        int a1 = scanner.nextInt();
+        switch (a1) {
+            case 0:
+                showMovie();
+                break;
+
+            case 1:
+                new checkoutMovie();
+                break;
+
+        }
+    }
+
+
+
+
 }
 
