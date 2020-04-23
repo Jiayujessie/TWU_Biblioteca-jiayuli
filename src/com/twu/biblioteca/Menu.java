@@ -51,12 +51,12 @@ public class Menu {
 
     // 菜单功能展示列表
     public void showUserMenu() {
-        System.out.println("请输入功能编号进入相应的功能：");
-        System.out.println("所有的图书信息——编号：1");
-        System.out.println("还书功能——编号：2");
-        System.out.println("书籍借阅功能——编号：3");
-        System.out.println("退出系统——编号：4");
-        System.out.print("请输入功能编号：");
+        System.out.println("Please type the number：");
+        System.out.println("Number：1 -- Book list");
+        System.out.println("Number：2 -- Borrow a book");
+        System.out.println("Number：3 -- Return a book");
+        System.out.println("Number：4 -- Exit the system");
+        System.out.print("please type the function number：");
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();//
         switch (a) {
@@ -76,7 +76,6 @@ public class Menu {
                 break;
         }
     }
-
 
 
     public void showMenu() {
@@ -113,6 +112,12 @@ public class Menu {
                 movieCheckout();
                 scanner.close();
                 break;
+
+            case 7://Veiw account information
+                userAccount();
+                scanner.close();
+                break;
+
         }
     }
 
@@ -125,7 +130,9 @@ public class Menu {
     }
 
     // 图书信息展示功能
-    public void showBook() { borrow.showBook();}
+    public void showBook() {
+        borrow.showBook();
+    }
 
     // 还书功能
     public void returnBook() {
@@ -137,18 +144,18 @@ public class Menu {
             System.out.println(bookname + " not be borrowed.");
             System.out.print("type 0 and enter to return main menu, type others to continue return books.");//输入0回车返回至主菜单，输入其他键则继续还书
             String a = scanner.nextLine();
-            if(a.equals("0")){
+            if (a.equals("0")) {
                 showMenu();
-            }else {
+            } else {
                 returnBook();
             }
         } else if (flag == -1) {
             System.out.println(bookname + " did not exist in library!");//不存在该图书馆中
             System.out.print("type 0 and enter to return main menu, type others to continue return books.");
             String a = scanner.nextLine();
-            if(a.equals("0")){
+            if (a.equals("0")) {
                 showMenu();
-            }else {
+            } else {
                 returnBook();
             }
         } else if (flag == 1) {
@@ -157,14 +164,13 @@ public class Menu {
             borrow.setBorrowReader(bookname);
             System.out.print("type 0 and enter to return main menu, type others to continue return books.");
             String a = scanner.nextLine();
-            if(a.equals("0")){
+            if (a.equals("0")) {
                 showMenu();
-            }else {
+            } else {
                 returnBook();
             }
         }
     }
-
 
 
     // 书籍借阅功能
@@ -193,9 +199,9 @@ public class Menu {
 
     // 电影信息展示功能
 
-    public void showMovie() { checkoutMovie.showMovie();}
-
-
+    public void showMovie() {
+        checkoutMovie.showMovie();
+    }
 
     // 电影借阅功能
     public void movieCheckout() {
@@ -218,6 +224,10 @@ public class Menu {
         }
     }
 
+    public void userAccount (){UserData.userAccount();
+
+
+    }
 
 
 
