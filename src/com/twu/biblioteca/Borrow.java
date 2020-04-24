@@ -7,7 +7,7 @@ public class Borrow {
     public static Book book = new Book();
     UserData user = new UserData();
 
-    // 管理员登录验证
+    // 登录验证
     public int login(String username, String password) {
         if (username.equals(user.getUser())) {
             if (password.equals(user.getPassword())) {
@@ -22,12 +22,12 @@ public class Borrow {
 
 
     public void showBook() {
-        System.out.println("Our library have  " + (book.booknames.length) + " books");
+        System.out.println("Our library have  " + (book.bookName.length) + " books");
         int a = bookinfo();
         if (a == 0) {
             // 展示所有图书信息
             showAll();
-        } else if (a > 0 && a <= book.booknames.length) {
+        } else if (a > 0 && a <= book.bookName.length) {
             // 展示相关图书信息
             showPart(a);
         } else {
@@ -38,15 +38,14 @@ public class Borrow {
 
     // 展示所有图书信息
     public void showAll() {
-        for (int i = 0; i < book.booknames.length; i++) {
-            if (book.booknames[i] != null) {
+        for (int i = 0; i < book.bookName.length; i++) {
+            if (book.bookName[i] != null) {
                 System.out.println("---------------------------------------编号" + (i + 1)
                         + "--------------------------------------------------------------");
                 System.out.println("Book ID" + (i + 1) + "'s information detail：");
-                System.out.print("Book Name：" + book.booknames[i] + " ");
+                System.out.print("Book Name：" + book.bookName[i] + " ");
                 System.out.print("Author：" + book.authors[i] + " ");
-                System.out.print("Published Date：" + book.pubdates[i] + " ");
-                System.out.print("Total pages：" + book.sumpaginations[i] + " ");
+                System.out.print("Published Date：" + book.pubDates[i] + " ");
             }
         }
         System.out.println(
@@ -57,17 +56,17 @@ public class Borrow {
         System.out.println(
                 "---------------------------------------------------------------------------------------------------------------");
         System.out.println("Book ID" + (a) + " detail：");
-        System.out.print("Book Name：" + book.booknames[a - 1] + " ");
+        System.out.print("Book Name：" + book.bookName[a - 1] + " ");
         System.out.println("Author：" + book.authors[a - 1] + " ");
-        System.out.print("Year Published：" + book.pubdates[a - 1] + " ");
+        System.out.print("Year Published：" + book.pubDates[a - 1] + " ");
         System.out.println(
                 "---------------------------------------------------------------分界线---------------------------------------------------");
     }
     //根据编号判断要全局展示还是部分展示
     public int bookinfo() {
-        for (int i = 0; i < book.booknames.length; i++) {
-            if (book.booknames[i] != null) {
-                System.out.println("Book ID" + (i + 1) + "：" + book.booknames[i] + " ");
+        for (int i = 0; i < book.bookName.length; i++) {
+            if (book.bookName[i] != null) {
+                System.out.println("Book ID" + (i + 1) + "：" + book.bookName[i] + " ");
             }
         }
         System.out.print(" Type the number for book detail, type 0 for all books information ：");//输入相应编号即可查看相应书籍的详细信息(输入0则查看所有信息)
@@ -78,8 +77,8 @@ public class Borrow {
     // 根据书名查找索引，有此书返其索引，无返-1
     public int selectIndex(String bookname) {
         int flag = -1;
-        for (int i = 0; i < book.booknames.length; i++) {
-            if (bookname.equals(book.booknames[i])) {
+        for (int i = 0; i < book.bookName.length; i++) {
+            if (bookname.equals(book.bookName[i])) {
                 flag = i;
             }
         }
@@ -90,18 +89,16 @@ public class Borrow {
 
         switch (a) {
             case 1:
-                book.booknames[index] = value;
+                book.bookName[index] = value;
                 break;
 
             case 2:
                 book.authors[index] = value;
                 break;
             case 3:
-                book.pubdates[index] = value;
+                book.pubDates[index] = value;
                 break;
-            case 4:
-                book.sumpaginations[index] = value;
-                break;
+
 
         }
 
@@ -114,7 +111,7 @@ public class Borrow {
         int a = selectIndex(bookname);
         // 馆里有此书
         if (a >= 0) {
-            if ((book.borrowreaders[a].equals("无") || book.borrowreaders[a].equals("")))// 无人借此书，""为扫描器的直接回车值
+            if ((book.borrowReaders[a].equals("无") || book.borrowReaders[a].equals("")))// 无人借此书，""为扫描器的直接回车值
                 return 0;//未借
             else
                 return 1;//已借
@@ -126,12 +123,12 @@ public class Borrow {
     //将借阅者设置为无或者为空
     public void setBorrowReader(String bookname){
         int a = selectIndex(bookname);
-        book.borrowreaders[a]="无";
+        book.borrowReaders[a]="无";
     }
     //查询指定书的借阅者
     public String getBorrowReader(String bookname){
         int a = selectIndex(bookname);
-        return book.borrowreaders[a];
+        return book.borrowReaders[a];
     }
 
 

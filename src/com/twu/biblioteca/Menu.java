@@ -86,6 +86,7 @@ public class Menu {
         System.out.println("Number：4 -- Exit the system");//(1.6) Quit the application
         System.out.println("Number：5 -- Movie list");// 2.1 / View a list of available movies
         System.out.println("Number：6 -- Checkout a movie");// 2.2 / Checkout a movie
+        System.out.println("Number：7 -- Veiw account information");//Veiw account information
         System.out.print("please type the function number：");
         Scanner scanner = new Scanner(System.in);
         int a = scanner.nextInt();//
@@ -138,10 +139,10 @@ public class Menu {
     public void returnBook() {
         System.out.print("Please type the name of book you want to return：");//输入要还的书籍名称
         Scanner scanner = new Scanner(System.in);
-        String bookname = scanner.nextLine();
-        int flag = borrow.testBook(bookname);
+        String bookName = scanner.nextLine();
+        int flag = borrow.testBook(bookName);
         if (flag == 0) {
-            System.out.println(bookname + " not be borrowed.");
+            System.out.println(bookName + " not be borrowed.");
             System.out.print("type 0 and enter to return main menu, type others to continue return books.");//输入0回车返回至主菜单，输入其他键则继续还书
             String a = scanner.nextLine();
             if (a.equals("0")) {
@@ -150,7 +151,7 @@ public class Menu {
                 returnBook();
             }
         } else if (flag == -1) {
-            System.out.println(bookname + " did not exist in library!");//不存在该图书馆中
+            System.out.println(bookName + " did not exist in library!");
             System.out.print("type 0 and enter to return main menu, type others to continue return books.");
             String a = scanner.nextLine();
             if (a.equals("0")) {
@@ -160,8 +161,8 @@ public class Menu {
             }
         } else if (flag == 1) {
 
-            System.out.println(borrow.getBorrowReader(bookname) + " success to return the book！");//成功还书
-            borrow.setBorrowReader(bookname);
+            System.out.println(borrow.getBorrowReader(bookName) + " success to return the book！");//成功还书
+            borrow.setBorrowReader(bookName);
             System.out.print("type 0 and enter to return main menu, type others to continue return books.");
             String a = scanner.nextLine();
             if (a.equals("0")) {
@@ -200,16 +201,16 @@ public class Menu {
     // 电影信息展示功能
 
     public void showMovie() {
-        checkoutMovie.showMovie();
+        CheckoutMovie.showMovie();
     }
 
     // 电影借阅功能
     public void movieCheckout() {
         System.out.print("Please put the movie's name：");//请输入电影名
         Scanner scanner = new Scanner(System.in);
-        String moviename = scanner.nextLine();
+        String movieName = scanner.nextLine();
         //不存在此书的情况
-        System.out.println("Failed，" + moviename + "is not exist in library!");
+        System.out.println("Failed，" + movieName + "is not exist in library!");
         System.out.print("type 0 to return main menu, or type 1 to continue ：");
         int a1 = scanner.nextInt();
         switch (a1) {
@@ -218,13 +219,15 @@ public class Menu {
                 break;
 
             case 1:
-                new checkoutMovie();
+                new CheckoutMovie();
                 break;
 
         }
     }
 
-    public void userAccount (){UserData.userAccount();
+    public void userAccount (){
+        System.out.print ("UserData.userAccount()");
+
 
 
     }
