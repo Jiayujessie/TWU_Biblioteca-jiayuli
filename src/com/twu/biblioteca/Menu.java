@@ -5,26 +5,16 @@ import java.util.Scanner;
 public class Menu {
     Borrow borrow = new Borrow();
 
-    public static void main(String[] args) {
-
-        Menu ui = new Menu();
-        ui.welcome();// 欢迎界面
-        ui.showMenu();
-
-
-    }
-
-    // 欢迎界面
     public void welcome() {
-        System.out.println("*********************************");
-        System.out.println("********Welcome to Biblioteca！********");
-        System.out.println("*********************************");
-        loginBoundary();// 登录界面
+
+        System.out.println(" Welcome to Biblioteca. You one-stop-one for great book titles in Bangalore!");
+
+        userLogin();
 
     }
 
-    // 管理员登录界面
-    public void loginBoundary() {
+    // 登录界面
+    public void userLogin() {
         System.out.print("Please type your library number(Try 1)：");
         Scanner scanner = new Scanner(System.in);
         String username = scanner.nextLine();
@@ -35,7 +25,7 @@ public class Menu {
         switch (flag) {
             case 0:// 密码错误
                 System.out.println("Wrong password, please type again:");
-                loginBoundary();
+                userLogin();
                 break;
 
             case 1:// 验证通过
@@ -44,7 +34,7 @@ public class Menu {
                 break;
             case -1:// 账户不存在
                 System.out.println("Your library number is not exist!");
-                loginBoundary();
+                userLogin();
                 break;
         }
     }

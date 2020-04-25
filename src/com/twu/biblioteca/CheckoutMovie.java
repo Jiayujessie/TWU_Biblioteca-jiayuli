@@ -21,8 +21,6 @@ public class CheckoutMovie {
     public void showAll() {
         for (int i = 0; i < movie.movieName.length; i++) {
             if (movie.movieName[i] != null) {
-                System.out.println("---------------------------------------编号" + (i + 1)
-                        + "--------------------------------------------------------------");
                 System.out.println("Movie name" + (i + 1) + "'s information detail：");
                 System.out.print("Director：" + movie.movieName[i] + " ");
                 System.out.print("Author：" + movie.director[i] + " ");
@@ -44,10 +42,10 @@ public class CheckoutMovie {
     }
 
     // 根据书名查找索引，有此书返其索引，无返-1
-    public int selectIndex(String bookname) {
+    public int selectIndex(String bookName) {
         int flag = -1;
         for (int i = 0; i < movie.movieName.length; i++) {
-            if (bookname.equals(movie.movieName[i])) {
+            if (bookName.equals(movie.movieName[i])) {
                 flag = i;
             }
         }
